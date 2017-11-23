@@ -17,7 +17,12 @@ Route::get('/', function () {
 
 // defining a new route
 Route::get('/test', function () {
-		return "This right here is a test";
+
+        $post = new \App\Post();
+
+        $post->save();
+
+		return "This right here is a test". $post;
 });
 
 // adding a param via a get request
