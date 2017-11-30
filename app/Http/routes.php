@@ -27,6 +27,8 @@ Route::get('/test', function () {
 		return "This right here is a test". $post;
 });
 
+Route::resource('game', 'GameController');
+
 // adding a param via a get request
 Route::get('/params/{param}', function($param) {
 		return "This right here is how we get params like ". $param;
