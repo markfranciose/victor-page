@@ -16,7 +16,9 @@ class PostController extends Controller
      */
     public function index()
     {
-			return "This is the index.";
+			$posts = Post::all()->toArray();
+
+			return view('post.index', compact('posts'));
     }
 
     /**
@@ -45,7 +47,7 @@ class PostController extends Controller
 
 			$post->save();
 
-			return "well, at least we got here..";
+			return redirect('/');
     }
 
     /**
