@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('post', 'PostController');
+
 // defining a new route
 Route::get('/test', function () {
 
