@@ -1,5 +1,5 @@
 @foreach($posts as $post)
-	{{$post['title']}}
+	<a href="/post/{{$post['id']}}">{{$post['title']}}</a>
 	<br>
 	{{$post['content']}}
 	<br>
